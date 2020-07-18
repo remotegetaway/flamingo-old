@@ -24,8 +24,8 @@ public class Items {
 
             () -> new SupplierSpawnEggItem(
                     Entities.FLAMINGO_ENTITY,
-                    0xB49D8A,
-                    0xF6F3EF,
+                    0xEF9A9A,
+                    0xFFE4E4,
 
                     (new Item.Properties())
                             .group(GROUP)

@@ -17,7 +17,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class EntityFlamingo extends AnimalEntity {
-    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.WHEAT);  // TODO
+    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.WHEAT_SEEDS);  // TODO
 
     public EntityFlamingo(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
