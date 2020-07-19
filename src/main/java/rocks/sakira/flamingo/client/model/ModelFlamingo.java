@@ -181,8 +181,8 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         // defer to the `render` method.
         //
         // Model code generators are wrong.
-        this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 0.8F) * 1.4F * limbSwingAmount;
-        this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 0.8F + (float) Math.PI) * 1.4F * limbSwingAmount;
+        this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 1F) * 1.4F * limbSwingAmount;
+        this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 1F + (float) Math.PI) * 1.4F * limbSwingAmount;
     }
 
     @Override
