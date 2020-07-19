@@ -68,46 +68,46 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
 
 
         neck1 = new ModelRenderer(this);
-        neck1.setRotationPoint(0.0F, -10.5476F, -2.5583F);
+        neck1.setRotationPoint(0.0F, -11.1335F, -0.3952F);
         neck.addChild(neck1);
         setRotationAngle(neck1, 0.1745F, 0.0F, 0.0F);
-        neck1.setTextureOffset(0, 39).addBox(-1.0F, -0.6746F, 1.134F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+        neck1.setTextureOffset(0, 39).addBox(-1.0F, -1.0165F, -1.0648F, 2.0F, 2.0F, 2.0F, 0.0F, true);
 
         neck2 = new ModelRenderer(this);
-        neck2.setRotationPoint(0.0F, -9.0181F, -2.3415F);
+        neck2.setRotationPoint(0.0F, -9.4989F, -0.5158F);
         neck.addChild(neck2);
         setRotationAngle(neck2, -0.192F, 0.0F, 0.0F);
-        neck2.setTextureOffset(8, 39).addBox(-1.0F, -1.3635F, 0.9047F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+        neck2.setTextureOffset(8, 39).addBox(-1.0F, -1.0511F, -0.9742F, 2.0F, 2.0F, 2.0F, 0.0F, true);
 
         neck3 = new ModelRenderer(this);
-        neck3.setRotationPoint(0.0F, -6.2735F, -3.4362F);
+        neck3.setRotationPoint(0.0F, -6.6716F, -1.6113F);
         neck.addChild(neck3);
         setRotationAngle(neck3, -0.4363F, 0.0F, 0.0F);
-        neck3.setTextureOffset(10, 33).addBox(-1.0F, -3.0952F, 0.8126F, 2.0F, 4.5F, 2.0F, 0.0F, true);
+        neck3.setTextureOffset(10, 33).addBox(-1.0F, -2.3484F, -0.9787F, 2.0F, 4.5F, 2.0F, 0.0F, true);
 
         neck4 = new ModelRenderer(this);
-        neck4.setRotationPoint(0.0F, -3.7704F, -4.7219F);
+        neck4.setRotationPoint(0.0F, -4.0659F, -2.5144F);
         neck.addChild(neck4);
         setRotationAngle(neck4, -0.0873F, 0.0F, 0.0F);
-        neck4.setTextureOffset(26, 33).addBox(-1.0F, -1.054F, 1.3643F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+        neck4.setTextureOffset(26, 33).addBox(-1.0F, -0.9841F, -0.9856F, 2.0F, 2.0F, 2.0F, 0.0F, true);
 
         neck5 = new ModelRenderer(this);
-        neck5.setRotationPoint(0.0F, -2.2486F, -4.1177F);
+        neck5.setRotationPoint(0.0F, -2.7267F, -2.304F);
         neck.addChild(neck5);
         setRotationAngle(neck5, -1.1345F, 0.0F, 0.0F);
-        neck5.setTextureOffset(24, 39).addBox(-1.0F, -2.8126F, -0.1548F, 2.0F, 2.0F, 2.0F, 0.0F, true);
+        neck5.setTextureOffset(24, 39).addBox(-1.0F, -1.0233F, -0.926F, 2.0F, 2.0F, 2.0F, 0.0F, true);
 
         neck6 = new ModelRenderer(this);
-        neck6.setRotationPoint(0.0F, -0.8836F, -2.779F);
+        neck6.setRotationPoint(0.0F, -1.1638F, -0.8853F);
         neck.addChild(neck6);
         setRotationAngle(neck6, -0.6109F, 0.0F, 0.0F);
-        neck6.setTextureOffset(10, 28).addBox(-1.0F, -2.1472F, 0.1383F, 2.0F, 2.0F, 3.0F, 0.0F, true);
+        neck6.setTextureOffset(10, 28).addBox(-1.0F, -1.0862F, -1.6147F, 2.0F, 2.0F, 3.0F, 0.0F, true);
 
         neckbase = new ModelRenderer(this);
-        neckbase.setRotationPoint(0.0F, -0.1202F, -1.7808F);
+        neckbase.setRotationPoint(0.0F, -0.7578F, 0.0152F);
         neck.addChild(neckbase);
         setRotationAngle(neckbase, 0.1745F, 0.0F, 0.0F);
-        neckbase.setTextureOffset(20, 28).addBox(-2.0F, -1.6528F, 1.4696F, 4.0F, 4.0F, 1.0F, 0.0F, true);
+        neckbase.setTextureOffset(20, 28).addBox(-2.0F, -2.4922F, -0.5152F, 4.0F, 4.0F, 1.0F, 0.0F, true);
 
         body = new ModelRenderer(this);
         body.setRotationPoint(0.0F, 8.0F, -2.0F);
