@@ -10,7 +10,7 @@ import rocks.sakira.flamingo.entity.EntityFlamingo;
 
 public class RenderFlamingo extends MobRenderer<EntityFlamingo, ModelFlamingo> {
     public RenderFlamingo(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ModelFlamingo(), 0.6f);
+        super(renderManagerIn, new ModelFlamingo(), 0.5f);
     }
 
 
