@@ -41,23 +41,23 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         textureHeight = 64;
 
         head = new ModelRenderer(this);
-        head.setRotationPoint(0.0F, 24.0F, 0.0F);
+        head.setRotationPoint(0.0F, -3.0F, -4.0F);
 
 
         bone10 = new ModelRenderer(this);
-        bone10.setRotationPoint(0.0F, -27.9F, -5.6F);
+        bone10.setRotationPoint(0.0F, -0.9F, -1.6F);
         head.addChild(bone10);
         setRotationAngle(bone10, 0.1745F, 0.0F, 0.0F);
         bone10.setTextureOffset(16, 15).addBox(-1.5F, -1.5F, -2.0F, 3.0F, 3.0F, 4.0F, 0.0F, true);
 
         bone3 = new ModelRenderer(this);
-        bone3.setRotationPoint(0.0F, -27.0339F, -8.0871F);
+        bone3.setRotationPoint(0.0F, -0.0339F, -4.0871F);
         head.addChild(bone3);
         setRotationAngle(bone3, 0.1745F, 0.0F, 0.0F);
         bone3.setTextureOffset(0, 28).addBox(-1.0F, -1.0578F, -2.4037F, 2.0F, 2.0F, 3.0F, 0.0F, true);
 
         bone = new ModelRenderer(this);
-        bone.setRotationPoint(0.0F, -26.4692F, -9.955F);
+        bone.setRotationPoint(0.0F, 0.5308F, -5.955F);
         head.addChild(bone);
         setRotationAngle(bone, 0.7854F, 0.0F, 0.0F);
         bone.setTextureOffset(16, 39).addBox(-1.1F, -1.3379F, -1.6107F, 2.2F, 2.1F, 2.0F, 0.0F, true);
@@ -113,11 +113,11 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         body.setTextureOffset(0, 0).addBox(-3.0F, -9.0F, -4.0F, 6.0F, 7.0F, 8.3F, 0.0F, true);
 
         wings = new ModelRenderer(this);
-        wings.setRotationPoint(0.0F, -5.2696F, 0.1527F);
+        wings.setRotationPoint(0.0F, -9.0F, 0.0F);
         body.addChild(wings);
         setRotationAngle(wings, -0.1745F, 0.0F, 0.0F);
-        wings.setTextureOffset(0, 15).addBox(-3.5F, -3.0F, -3.5F, 1.0F, 6.0F, 7.0F, 0.0F, true);
-        wings.setTextureOffset(28, 0).addBox(2.5F, -3.0F, -3.5F, 1.0F, 6.0F, 7.0F, 0.0F, true);
+        wings.setTextureOffset(0, 15).addBox(-3.5F, 0.6697F, -2.6528F, 1.0F, 6.0F, 7.0F, 0.0F, true);
+        wings.setTextureOffset(28, 0).addBox(2.5F, 0.6697F, -2.6528F, 1.0F, 6.0F, 7.0F, 0.0F, true);
 
         tail = new ModelRenderer(this);
         tail.setRotationPoint(0.0F, -4.5503F, 4.6666F);
@@ -127,52 +127,52 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         tail.setTextureOffset(18, 33).addBox(-1.5F, -1.5579F, -0.0591F, 3.0F, 4.0F, 1.0F, 0.0F, true);
 
         leftleg = new ModelRenderer(this);
-        leftleg.setRotationPoint(1.6F, 11.24F, 0.02F);
-        leftleg.setTextureOffset(0, 33).addBox(-4.1F, -0.24F, -1.97F, 2.0F, 1.0F, 3.0F, 0.0F, true);
-        leftleg.setTextureOffset(0, 53).addBox(-3.8F, 5.86F, -0.37F, 1.4F, 1.2F, 1.4F, 0.0F, true);
+        leftleg.setRotationPoint(-1.5F, 18.0F, 1.0F);
+        leftleg.setTextureOffset(0, 33).addBox(-1.0F, -7.0F, -2.95F, 2.0F, 1.0F, 3.0F, 0.0F, true);
+        leftleg.setTextureOffset(0, 50).addBox(-0.8F, -0.7F, -1.45F, 1.5F, 1.0F, 1.5F, 0.0F, true);
 
         upper = new ModelRenderer(this);
-        upper.setRotationPoint(-0.1F, 3.2663F, 0.0437F);
+        upper.setRotationPoint(0.0F, -6.4937F, -0.9363F);
         leftleg.addChild(upper);
         setRotationAngle(upper, 0.1745F, 0.0F, 0.0F);
-        upper.setTextureOffset(8, 46).addBox(-3.5F, -2.75F, -0.6273F, 1.0F, 5.5F, 1.0F, 0.0F, true);
+        upper.setTextureOffset(4, 43).addBox(-0.5F, -0.5519F, -1.1916F, 1.0F, 6.5F, 1.0F, 0.0F, true);
 
         lower = new ModelRenderer(this);
-        lower.setRotationPoint(-0.1F, 9.71F, -0.22F);
+        lower.setRotationPoint(0.0F, -0.05F, -0.2F);
         leftleg.addChild(lower);
         setRotationAngle(lower, -0.0873F, 0.0F, 0.0F);
-        lower.setTextureOffset(0, 46).addBox(-3.5F, -3.0F, -0.1F, 1.0F, 6.0F, 1.0F, 0.0F, true);
+        lower.setTextureOffset(0, 43).addBox(-0.5F, 0.0758F, -0.8346F, 1.0F, 6.0F, 1.0F, 0.0F, true);
 
         leftfeet = new ModelRenderer(this);
-        leftfeet.setRotationPoint(-0.1333F, 12.5933F, -0.4033F);
+        leftfeet.setRotationPoint(-0.1333F, 5.8333F, -2.9833F);
         leftleg.addChild(leftfeet);
-        leftfeet.setTextureOffset(4, 54).addBox(-3.3667F, 0.1667F, -2.0167F, 1.0F, 0.0F, 1.0F, 0.0F, true);
-        leftfeet.setTextureOffset(8, 54).addBox(-3.4667F, -0.8333F, -0.1167F, 1.0F, 1.0F, 0.9F, 0.0F, true);
-        leftfeet.setTextureOffset(14, 46).addBox(-4.0667F, 0.1667F, -1.0167F, 2.2F, 0.0F, 1.8F, 0.0F, true);
+        leftfeet.setTextureOffset(5, 50).addBox(-0.3667F, -0.8333F, 1.4833F, 1.0F, 1.0F, 0.9F, 0.0F, true);
+        leftfeet.setTextureOffset(8, 43).addBox(-0.8667F, 0.1667F, 0.3833F, 2.0F, 0.0F, 2.0F, 0.0F, true);
+        leftfeet.setTextureOffset(4, 51).addBox(-0.3667F, 0.1657F, -0.4167F, 1.0F, 0.0F, 1.0F, 0.0F, true);
 
         rightleg = new ModelRenderer(this);
-        rightleg.setRotationPoint(-1.4F, 11.24F, 0.02F);
-        rightleg.setTextureOffset(30, 28).addBox(1.9F, -0.24F, -1.97F, 2.0F, 1.0F, 3.0F, 0.0F, true);
-        rightleg.setTextureOffset(14, 47).addBox(2.2F, 5.86F, -0.37F, 1.4F, 1.2F, 1.4F, 0.0F, true);
+        rightleg.setRotationPoint(1.5F, 18.0F, 1.0F);
+        rightleg.setTextureOffset(30, 28).addBox(-1.0F, -7.0F, -2.95F, 2.0F, 1.0F, 3.0F, 0.0F, true);
+        rightleg.setTextureOffset(0, 50).addBox(-0.7F, -0.7F, -1.45F, 1.5F, 1.0F, 1.5F, 0.0F, true);
 
         upper2 = new ModelRenderer(this);
-        upper2.setRotationPoint(-0.1F, 3.2663F, 0.0437F);
+        upper2.setRotationPoint(0.0F, -6.4937F, -0.9363F);
         rightleg.addChild(upper2);
         setRotationAngle(upper2, 0.1745F, 0.0F, 0.0F);
-        upper2.setTextureOffset(4, 46).addBox(2.5F, -2.75F, -0.6273F, 1.0F, 5.5F, 1.0F, 0.0F, true);
+        upper2.setTextureOffset(4, 43).addBox(-0.5F, -0.5519F, -1.2002F, 1.0F, 6.5F, 1.0F, 0.0F, true);
 
         lower2 = new ModelRenderer(this);
-        lower2.setRotationPoint(-0.1F, 9.71F, -0.22F);
+        lower2.setRotationPoint(0.0F, -0.05F, -0.2F);
         rightleg.addChild(lower2);
         setRotationAngle(lower2, -0.0873F, 0.0F, 0.0F);
-        lower2.setTextureOffset(32, 39).addBox(2.5F, -3.0F, -0.1F, 1.0F, 6.0F, 1.0F, 0.0F, true);
+        lower2.setTextureOffset(0, 43).addBox(-0.5F, 0.0758F, -0.8346F, 1.0F, 6.0F, 1.0F, 0.0F, true);
 
         leftfeet2 = new ModelRenderer(this);
-        leftfeet2.setRotationPoint(-0.1333F, 12.5933F, -0.4033F);
+        leftfeet2.setRotationPoint(-0.0333F, 5.8333F, -1.3833F);
         rightleg.addChild(leftfeet2);
-        leftfeet2.setTextureOffset(4, 53).addBox(2.6333F, 0.1667F, -2.0167F, 1.0F, 0.0F, 1.0F, 0.0F, true);
-        leftfeet2.setTextureOffset(8, 53).addBox(2.5333F, -0.8333F, -0.1167F, 1.0F, 1.0F, 0.9F, 0.0F, true);
-        leftfeet2.setTextureOffset(8, 52).addBox(1.9333F, 0.1667F, -1.0167F, 2.2F, 0.0F, 1.8F, 0.0F, true);
+        leftfeet2.setTextureOffset(4, 51).addBox(-0.3667F, 0.1657F, -2.0167F, 1.0F, 0.0F, 1.0F, 0.0F, true);
+        leftfeet2.setTextureOffset(5, 50).addBox(-0.4667F, -0.8333F, -0.1167F, 1.0F, 1.0F, 0.9F, 0.0F, true);
+        leftfeet2.setTextureOffset(8, 43).addBox(-0.8667F, 0.1667F, -1.2667F, 2.0F, 0.0F, 2.0F, 0.0F, true);
     }
 
     @Override
@@ -181,8 +181,8 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         // defer to the `render` method.
         //
         // Model code generators are wrong.
-        this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 1F) * 1.4F * limbSwingAmount;
-        this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 1F + (float) Math.PI) * 1.4F * limbSwingAmount;
+        this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 1F) * 0.7F * limbSwingAmount;
+        this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 1F + (float) Math.PI) * 0.7F * limbSwingAmount;
     }
 
     @Override
