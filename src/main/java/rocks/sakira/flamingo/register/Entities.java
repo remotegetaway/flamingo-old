@@ -18,7 +18,7 @@ public class Entities {
 
             () -> EntityType.Builder
                     .create(EntityFlamingo::new, EntityClassification.CREATURE)
-                    .size(0.6F, 1.9F)  // TODO
+                    .size(0.6F, 1.9F)
                     .setTrackingRange(64)
                     .setUpdateInterval(1)
                     .build("flamingo")

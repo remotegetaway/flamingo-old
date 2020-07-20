@@ -4,9 +4,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.world.gen.Heightmap;
+import net.minecraft.world.storage.loot.LootTables;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ColorHandlerEvent;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -60,7 +62,10 @@ public class Flamingo {
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public void setupItemColours(final ColorHandlerEvent.Item event) {
-
+        event.getItemColors().register((itemColor, itemsIn) ->
+                Items.FLAMINGO_SPAWN_EGG.get().getColor(itemsIn),
+                Items.FLAMINGO_SPAWN_EGG.get()
+        );
     }
 
     @SubscribeEvent

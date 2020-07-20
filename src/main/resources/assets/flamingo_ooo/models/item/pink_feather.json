@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "flamingo_ooo:item/feather"
+        "layer0": "flamingo_ooo:item/pink_feather"
     },
     "display": {
         "head": {

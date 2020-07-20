@@ -23,7 +23,7 @@ public class RenderFlamingo extends MobRenderer<EntityFlamingo, ModelFlamingo> {
 
     @Override
     public ResourceLocation getEntityTexture(EntityFlamingo entity) {
-        return getEntityTexture("adult");  // TODO: Child texture
+        return entity.isChild() ? getEntityTexture("baby") : getEntityTexture("adult");
     }
 
     private ResourceLocation getEntityTexture(String fileName) {

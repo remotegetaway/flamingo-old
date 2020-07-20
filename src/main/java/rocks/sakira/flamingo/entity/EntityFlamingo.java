@@ -66,7 +66,7 @@ public class EntityFlamingo extends AnimalEntity {
 
     @Override
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return this.isChild() ? 1.15F : 1.75F;  // TODO
+        return this.isChild() ? 1.15F : 1.75F;
     }
 
     @Nullable

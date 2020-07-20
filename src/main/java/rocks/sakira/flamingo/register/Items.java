@@ -1,9 +1,6 @@
 package rocks.sakira.flamingo.register;
 
-import net.minecraft.item.Foods;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -17,11 +14,11 @@ public class Items {
     private static final ItemGroup GROUP = new ItemGroup("flamingo_ooo") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(FLAMINGO_SPAWN_EGG.get());
+            return new ItemStack(PINK_FEATHER.get());
         }
     };
 
-    public static final RegistryObject<Item> FLAMINGO_SPAWN_EGG = REGISTER.register(
+    public static final RegistryObject<SpawnEggItem> FLAMINGO_SPAWN_EGG = REGISTER.register(
             "flamingo_spawn_egg",
 
             () -> new SupplierSpawnEggItem(
@@ -44,7 +41,7 @@ public class Items {
             )
     );
 
-    public static final RegistryObject<Item> PINK_FEATHERS = REGISTER.register(
+    public static final RegistryObject<Item> PINK_FEATHER = REGISTER.register(
             "pink_feather",
 
             () -> new Item(
