@@ -8,7 +8,6 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
@@ -16,12 +15,13 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import rocks.sakira.flamingo.register.Entities;
+import rocks.sakira.flamingo.register.Items;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public class EntityFlamingo extends AnimalEntity {
-    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.WHEAT_SEEDS);  // TODO
+    private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.SHRIMP.get());
 
     public int timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
 
@@ -33,7 +33,6 @@ public class EntityFlamingo extends AnimalEntity {
 
     @Override
     protected void registerGoals() {  // TODO
-
         this.goalSelector.addGoal(0, new PanicGoal(this, 0.4));
         this.goalSelector.addGoal(1, new TemptGoal(this, 0.4, false, TEMPTATION_ITEMS));
         this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.25));
@@ -43,12 +42,11 @@ public class EntityFlamingo extends AnimalEntity {
         this.goalSelector.addGoal(6, new FollowParentGoal(this, 0.4));
         this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(8, new LookAtGoal(this, EntityFlamingo.class, 6.0F));
-
     }
 
     @Override
     public boolean isBreedingItem(@Nonnull ItemStack stack) {
-        return !stack.isEmpty() && TEMPTATION_ITEMS.test(stack);
+        return TEMPTATION_ITEMS.test(stack);
     }
 
     @Override
