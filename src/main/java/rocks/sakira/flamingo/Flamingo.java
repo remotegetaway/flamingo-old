@@ -1,5 +1,7 @@
 package rocks.sakira.flamingo;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,6 +48,11 @@ public class Flamingo {
         RenderingRegistry.registerEntityRenderingHandler(
                 Entities.FLAMINGO_ENTITY.get(),
                 RenderFlamingo::new
+        );
+
+        RenderingRegistry.registerEntityRenderingHandler(
+                Entities.FLAMINGO_EGG_ENTITY.get(),
+                (rendererManager) -> new SpriteRenderer<>(rendererManager, Minecraft.getInstance().getItemRenderer())
         );
     }
 
