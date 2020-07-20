@@ -34,13 +34,13 @@ public class EntityFlamingo extends AnimalEntity {
     @Override
     protected void registerGoals() {  // TODO
 
-        this.goalSelector.addGoal(0, new PanicGoal(this, 0.5));
-        this.goalSelector.addGoal(1, new TemptGoal(this, 0.5, false, TEMPTATION_ITEMS));
-        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.3));
+        this.goalSelector.addGoal(0, new PanicGoal(this, 0.4));
+        this.goalSelector.addGoal(1, new TemptGoal(this, 0.4, false, TEMPTATION_ITEMS));
+        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.25));
         this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(4, new DeepSwimGoal(this));
-        this.goalSelector.addGoal(5, new BreedGoal(this, 0.4));
-        this.goalSelector.addGoal(6, new FollowParentGoal(this, 0.5));
+        this.goalSelector.addGoal(5, new BreedGoal(this, 0.3));
+        this.goalSelector.addGoal(6, new FollowParentGoal(this, 0.4));
         this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(8, new LookAtGoal(this, EntityFlamingo.class, 6.0F));
 
