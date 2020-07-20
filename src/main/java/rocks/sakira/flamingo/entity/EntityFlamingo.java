@@ -1,15 +1,19 @@
 package rocks.sakira.flamingo.entity;
 
-import net.minecraft.entity.*;
+import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.EntitySize;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.Pose;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
-import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import rocks.sakira.flamingo.register.Entities;
 
@@ -18,6 +22,8 @@ import javax.annotation.Nullable;
 
 public class EntityFlamingo extends AnimalEntity {
     private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.WHEAT_SEEDS);  // TODO
+
+    public int timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
 
     public EntityFlamingo(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
@@ -49,7 +55,7 @@ public class EntityFlamingo extends AnimalEntity {
     public EntitySize getSize(Pose poseIn) {
         EntitySize size = super.getSize(poseIn);
 
-        return this.isChild() ? size.scale(0.66F) : size;  // TODO?
+        return this.isChild() ? size.scale(1.33F) : size;
     }
 
     @Nullable
@@ -60,7 +66,7 @@ public class EntityFlamingo extends AnimalEntity {
 
     @Override
     protected float getStandingEyeHeight(Pose pose, EntitySize size) {
-        return this.isChild() ? 1.25F : 1.75F;  // TODO
+        return this.isChild() ? 1.15F : 1.75F;  // TODO
     }
 
     @Nullable
@@ -72,6 +78,33 @@ public class EntityFlamingo extends AnimalEntity {
 //        return SoundEvents.DOE_SOUND.get();
 
         return null;  // TODO
+    }
+
+    @Override
+    public void livingTick() {
+        super.livingTick();
+
+        if (!this.world.isRemote && this.isAlive() && !this.isChild() && --this.timeUntilNextEgg <= 0) {
+            this.playSound(SoundEvents.ENTITY_CHICKEN_EGG, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
+            this.entityDropItem(rocks.sakira.flamingo.register.Items.FLAMINGO_EGG.get());
+            this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
+        }
+    }
+
+    @Override
+    public void readAdditional(CompoundNBT compound) {
+        super.readAdditional(compound);
+
+        if (compound.contains("EggLayTime")) {
+            this.timeUntilNextEgg = compound.getInt("EggLayTime");
+        }
+    }
+
+    @Override
+    public void writeAdditional(CompoundNBT compound) {
+        super.writeAdditional(compound);
+
+        compound.putInt("EggLayTime", this.timeUntilNextEgg);
     }
 
     // TODO?
