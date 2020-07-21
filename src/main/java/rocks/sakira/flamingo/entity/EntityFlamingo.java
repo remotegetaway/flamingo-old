@@ -13,6 +13,7 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import rocks.sakira.flamingo.register.Entities;
 import rocks.sakira.flamingo.register.Items;
@@ -103,6 +104,11 @@ public class EntityFlamingo extends AnimalEntity {
         super.writeAdditional(compound);
 
         compound.putInt("EggLayTime", this.timeUntilNextEgg);
+    }
+
+    @Override
+    public ItemStack getPickedResult(RayTraceResult target) {
+        return new ItemStack(Items.FLAMINGO_SPAWN_EGG.get());
     }
 
     // TODO?
