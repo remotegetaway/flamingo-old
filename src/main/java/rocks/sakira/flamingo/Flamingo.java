@@ -4,11 +4,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.SpriteRenderer;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.world.gen.Heightmap;
-import net.minecraft.world.storage.loot.LootTables;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ColorHandlerEvent;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -20,6 +18,7 @@ import rocks.sakira.flamingo.client.render.RenderFlamingo;
 import rocks.sakira.flamingo.entity.EntityFlamingo;
 import rocks.sakira.flamingo.register.Entities;
 import rocks.sakira.flamingo.register.Items;
+import rocks.sakira.flamingo.register.SoundEvents;
 
 @Mod(Flamingo.MOD_ID)
 public class Flamingo {
@@ -32,6 +31,7 @@ public class Flamingo {
 
         Entities.REGISTER.register(eventBus);
         Items.REGISTER.register(eventBus);
+        SoundEvents.REGISTER.register(eventBus);
     }
 
     @SubscribeEvent
@@ -63,7 +63,7 @@ public class Flamingo {
     @OnlyIn(Dist.CLIENT)
     public void setupItemColours(final ColorHandlerEvent.Item event) {
         event.getItemColors().register((itemColor, itemsIn) ->
-                Items.FLAMINGO_SPAWN_EGG.get().getColor(itemsIn),
+                        Items.FLAMINGO_SPAWN_EGG.get().getColor(itemsIn),
                 Items.FLAMINGO_SPAWN_EGG.get()
         );
     }

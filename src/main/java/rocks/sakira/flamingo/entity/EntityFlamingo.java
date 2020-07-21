@@ -111,6 +111,11 @@ public class EntityFlamingo extends AnimalEntity {
         return new ItemStack(Items.FLAMINGO_SPAWN_EGG.get());
     }
 
+    @Override
+    public SoundEvent getAmbientSound() {
+        return rocks.sakira.flamingo.register.SoundEvents.FLAMINGO_AMBIENT_SOUND.get();
+    }
+
     // TODO?
 //    @Override
 //    public void onDeath(DamageSource cause) {

@@ -1,0 +1,9 @@
+{
+  "entity.flamingo.ambient": {
+    "subtitle": "subtitle.flamingo.ambient",
+    "sounds": [
+      "flamingo_ooo:flamingo_ambient",
+      "flamingo_ooo:flamingo_ambient_2"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:fishing",
+  "replace": false,
+
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 100,
+          "name": "flamingo_ooo:shrimp"
+        }
+      ]
+    }
+  ]
+}
