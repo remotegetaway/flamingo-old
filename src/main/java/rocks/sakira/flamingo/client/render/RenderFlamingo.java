@@ -6,13 +6,17 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import rocks.sakira.flamingo.Flamingo;
 import rocks.sakira.flamingo.client.model.ModelFlamingo;
+import rocks.sakira.flamingo.client.model.ModelFlamingoIdle;
 import rocks.sakira.flamingo.entity.EntityFlamingo;
 
 public class RenderFlamingo extends MobRenderer<EntityFlamingo, ModelFlamingo> {
+    private final ModelFlamingoIdle idleModel;
+
     public RenderFlamingo(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new ModelFlamingo(), 0.5f);
-    }
 
+        idleModel = new ModelFlamingoIdle();
+    }
 
     @Override
     protected void preRenderCallback(EntityFlamingo entitylivingbaseIn, MatrixStack matrixStackIn, float partialTickTime) {

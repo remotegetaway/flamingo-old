@@ -1,4 +1,4 @@
-package rocks.sakira.flamingo.entity;
+package rocks.sakira.flamingo.entity.goals;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.MobEntity;

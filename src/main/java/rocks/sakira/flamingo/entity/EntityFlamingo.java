@@ -15,6 +15,8 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import rocks.sakira.flamingo.entity.goals.DeepSwimGoal;
+import rocks.sakira.flamingo.entity.goals.LegUpGoal;
 import rocks.sakira.flamingo.register.Entities;
 import rocks.sakira.flamingo.register.Items;
 
@@ -23,6 +25,9 @@ import javax.annotation.Nullable;
 
 public class EntityFlamingo extends AnimalEntity {
     private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.SHRIMP.get());
+
+    public boolean isOneLegged = false;
+    public int oneLeggedCycles = 0;
 
     public int timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
 
@@ -40,9 +45,10 @@ public class EntityFlamingo extends AnimalEntity {
         this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(4, new DeepSwimGoal(this));
         this.goalSelector.addGoal(5, new BreedGoal(this, 0.3));
-        this.goalSelector.addGoal(6, new FollowParentGoal(this, 0.4));
-        this.goalSelector.addGoal(7, new LookAtGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.addGoal(8, new LookAtGoal(this, EntityFlamingo.class, 6.0F));
+        this.goalSelector.addGoal(6, new LegUpGoal(this));
+        this.goalSelector.addGoal(7, new FollowParentGoal(this, 0.4));
+        this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.addGoal(9, new LookAtGoal(this, EntityFlamingo.class, 6.0F));
     }
 
     @Override

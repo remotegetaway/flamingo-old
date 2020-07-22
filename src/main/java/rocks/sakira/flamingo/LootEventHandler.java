@@ -1,10 +1,7 @@
 package rocks.sakira.flamingo;
 
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.ItemLootEntry;
-import net.minecraft.world.storage.loot.LootPool;
 import net.minecraft.world.storage.loot.LootTables;
-import net.minecraft.world.storage.loot.TableLootEntry;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -22,9 +19,9 @@ public class LootEventHandler {
             event.getTable()
                     .getPool("main")
                     .lootEntries.add(  // We make this public in an access transformer, ignore IDEA
-                            ItemLootEntry.builder(Items.SHRIMP.get())
-                                    .weight(13)
-                                    .build()
+                    ItemLootEntry.builder(Items.SHRIMP.get())
+                            .weight(13)
+                            .build()
             );
 
             LOGGER.info("Registered with loot table: " + LootTables.GAMEPLAY_FISHING);
