@@ -10,6 +10,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.network.datasync.DataParameter;
+import net.minecraft.network.datasync.DataSerializers;
+import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
@@ -25,9 +28,7 @@ import javax.annotation.Nullable;
 
 public class EntityFlamingo extends AnimalEntity {
     private static final Ingredient TEMPTATION_ITEMS = Ingredient.fromItems(Items.SHRIMP.get());
-
-    public boolean isOneLegged = false;
-    public int oneLeggedCycles = 0;
+    private static final DataParameter<Boolean> LEG_UP_STATE = EntityDataManager.createKey(EntityFlamingo.class, DataSerializers.BOOLEAN);
 
     public int timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
 
@@ -38,14 +39,21 @@ public class EntityFlamingo extends AnimalEntity {
     }
 
     @Override
+    protected void registerData() {
+        super.registerData();
+
+        getDataManager().register(LEG_UP_STATE, false);
+    }
+
+    @Override
     protected void registerGoals() {  // TODO
         this.goalSelector.addGoal(0, new PanicGoal(this, 0.4));
         this.goalSelector.addGoal(1, new TemptGoal(this, 0.4, false, TEMPTATION_ITEMS));
-        this.goalSelector.addGoal(2, new RandomWalkingGoal(this, 0.25));
-        this.goalSelector.addGoal(3, new LookRandomlyGoal(this));
-        this.goalSelector.addGoal(4, new DeepSwimGoal(this));
-        this.goalSelector.addGoal(5, new BreedGoal(this, 0.3));
-        this.goalSelector.addGoal(6, new LegUpGoal(this));
+        this.goalSelector.addGoal(2, new BreedGoal(this, 0.3));
+        this.goalSelector.addGoal(3, new LegUpGoal(this));
+        this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.25));
+        this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(6, new DeepSwimGoal(this));
         this.goalSelector.addGoal(7, new FollowParentGoal(this, 0.4));
         this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(9, new LookAtGoal(this, EntityFlamingo.class, 6.0F));
@@ -103,6 +111,16 @@ public class EntityFlamingo extends AnimalEntity {
         if (compound.contains("EggLayTime")) {
             this.timeUntilNextEgg = compound.getInt("EggLayTime");
         }
+
+        dataManager.set(LEG_UP_STATE, compound.getBoolean("LegUpState"));
+    }
+
+    public boolean isOneLegged() {
+        return dataManager.get(LEG_UP_STATE);
+    }
+
+    public void setOneLegged(boolean state) {
+        dataManager.set(LEG_UP_STATE, state);
     }
 
     @Override
@@ -110,6 +128,7 @@ public class EntityFlamingo extends AnimalEntity {
         super.writeAdditional(compound);
 
         compound.putInt("EggLayTime", this.timeUntilNextEgg);
+        compound.putBoolean("LegUpState", dataManager.get(LEG_UP_STATE));
     }
 
     @Override

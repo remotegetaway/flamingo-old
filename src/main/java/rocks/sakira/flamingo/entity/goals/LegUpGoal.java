@@ -4,11 +4,15 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import rocks.sakira.flamingo.entity.EntityFlamingo;
 
 import java.util.EnumSet;
 
 public class LegUpGoal extends Goal {
+    private static final Logger LOGGER = LogManager.getLogger("Flamingo/LegUpGoal");
+
     private final EntityFlamingo entity;
 
     private int cycleCount = 0;
@@ -41,17 +45,19 @@ public class LegUpGoal extends Goal {
 
     @Override
     public void resetTask() {
-        this.cycleCount = this.totalCycles;
+        LOGGER.info("Resetting goal");
 
-        this.entity.isOneLegged = false;
-        this.entity.oneLeggedCycles = 0;
+        this.cycleCount = 0;
+        this.entity.setOneLegged(false);
     }
 
     @Override
     public void tick() {
-        this.cycleCount += 1;
+        if (this.cycleCount == 0) {
+            LOGGER.info("Executing goal");
+        }
 
-        this.entity.isOneLegged = true;
-        this.entity.oneLeggedCycles = cycleCount;
+        this.cycleCount += 1;
+        this.entity.setOneLegged(true);
     }
 }

@@ -5,32 +5,37 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import rocks.sakira.flamingo.entity.EntityFlamingo;
 
 public class ModelFlamingo extends EntityModel<EntityFlamingo> {
-    private final ModelRenderer head;
-    private final ModelRenderer headbox;
+    private static final Logger LOGGER = LogManager.getLogger("Flamingo/ModelFlamingo");
+    private Integer legCounter;
+
     private final ModelRenderer beak;
     private final ModelRenderer beaktip;
-    private final ModelRenderer neck;
+    private final ModelRenderer body;
+    private final ModelRenderer head;
+    private final ModelRenderer headbox;
+    private final ModelRenderer leftfeet2;
+    private final ModelRenderer leftfeet;
+    private final ModelRenderer leftleg;
+    private final ModelRenderer lower2;
+    private final ModelRenderer lower;
     private final ModelRenderer neck1;
     private final ModelRenderer neck2;
     private final ModelRenderer neck3;
     private final ModelRenderer neck4;
     private final ModelRenderer neck5;
     private final ModelRenderer neck6;
+    private final ModelRenderer neck;
     private final ModelRenderer neckbase;
-    private final ModelRenderer body;
-    private final ModelRenderer wings;
-    private final ModelRenderer tail;
-    private final ModelRenderer leftleg;
-    private final ModelRenderer upper;
-    private final ModelRenderer lower;
-    private final ModelRenderer leftfeet;
     private final ModelRenderer rightleg;
+    private final ModelRenderer tail;
     private final ModelRenderer upper2;
-    private final ModelRenderer lower2;
-    private final ModelRenderer leftfeet2;
+    private final ModelRenderer upper;
+    private final ModelRenderer wings;
 
 
     public ModelFlamingo() {
@@ -183,8 +188,45 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
         this.head.rotateAngleY = netHeadYaw * 0.017453292F;
         this.body.rotateAngleY = netHeadYaw * 0.017453292F * 0.25F;
         this.neck.rotateAngleY = netHeadYaw * 0.017453292F * 0.25F;
-        this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 1F) * 0.7F * limbSwingAmount;
-        this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 1F + (float) Math.PI) * 0.7F * limbSwingAmount;
+
+        if (entity.isOneLegged()) {
+            if (this.legCounter == null) {
+                this.legCounter = 0;
+            }
+
+            if (this.legCounter == 0) LOGGER.info("Entity is one-legged.");
+
+            if (this.legCounter < 1) {
+                LOGGER.info("Cycles < 1, resetting");
+
+                this.upper2.rotateAngleX = 0;
+                this.lower2.rotateAngleX = 0;
+                this.leftfeet2.rotateAngleX = 0;
+                this.rightleg.rotateAngleX = 0;
+            } else if (this.legCounter < 50) {
+                LOGGER.info("Cycles < 50, animating");
+
+                this.upper2.rotateAngleX += -83.9981F;
+                this.lower2.rotateAngleX += 0.017453292F;
+                this.leftfeet2.rotateAngleX += 0.017453292F;
+                this.rightleg.rotateAngleX += 0.017453292F;
+            } else LOGGER.info("Cycles > 50");
+
+            if (this.legCounter < 50) this.legCounter += 1;
+        } else {
+            this.legCounter = null;
+
+            if (ageInTicks % 200 == 0) {
+                LOGGER.info("Entity is not one-legged.");
+            }
+
+            this.upper2.rotateAngleX = 0.1745F;
+            this.lower2.rotateAngleX = 0;
+            this.leftfeet2.rotateAngleX = 0;
+
+            this.leftleg.rotateAngleX = MathHelper.cos(limbSwing * 1F) * 0.7F * limbSwingAmount;
+            this.rightleg.rotateAngleX = MathHelper.cos(limbSwing * 1F + (float) Math.PI) * 0.7F * limbSwingAmount;
+        }
     }
 
     @Override
