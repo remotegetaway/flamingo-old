@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "flamingo_ooo:suspicious_chicken"
+  },
+  "result": "flamingo_ooo:cooked_suspicious_chicken",
+  "experience": 1.0,
+  "cookingtime": 200
+}
