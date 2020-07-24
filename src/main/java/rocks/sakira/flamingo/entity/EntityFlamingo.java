@@ -138,6 +138,8 @@ public class EntityFlamingo extends AnimalEntity {
 
     @Override
     public SoundEvent getAmbientSound() {
+        if (this.isChild()) return rocks.sakira.flamingo.register.SoundEvents.BABY_FLAMINGO_AMBIENT_SOUND.get();
+
         return rocks.sakira.flamingo.register.SoundEvents.FLAMINGO_AMBIENT_SOUND.get();
     }
 

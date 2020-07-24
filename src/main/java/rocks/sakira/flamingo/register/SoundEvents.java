@@ -15,4 +15,10 @@ public class SoundEvents {
 
             () -> new SoundEvent(new ResourceLocation(Flamingo.MOD_ID, "entity.flamingo.ambient"))
     );
+
+    public static final RegistryObject<SoundEvent> BABY_FLAMINGO_AMBIENT_SOUND = REGISTER.register(
+            "entity.flamingo.baby.ambient",
+
+            () -> new SoundEvent(new ResourceLocation(Flamingo.MOD_ID, "entity.flamingo.baby.ambient"))
+    );
 }

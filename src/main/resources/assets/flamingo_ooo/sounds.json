@@ -5,5 +5,13 @@
       "flamingo_ooo:flamingo_ambient",
       "flamingo_ooo:flamingo_ambient_2"
     ]
+  },
+
+  "entity.flamingo.baby.ambient": {
+    "subtitle": "subtitle.flamingo.baby.ambient",
+    "sounds": [
+      "flamingo_ooo:flamingo_ambient",
+      "flamingo_ooo:flamingo_ambient_2"
+    ]
   }
 }
