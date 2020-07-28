@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import rocks.sakira.flamingo.Flamingo;
 import rocks.sakira.flamingo.item.ItemFlamingoEgg;
+import rocks.sakira.flamingo.item.ItemShrimp;
 import rocks.sakira.flamingo.item.SupplierSpawnEggItem;
 
 public class Items {
@@ -53,7 +54,7 @@ public class Items {
     public static final RegistryObject<Item> SHRIMP = REGISTER.register(
             "shrimp",
 
-            () -> new Item(
+            () -> new ItemShrimp(
                     new Item.Properties()
                             .maxStackSize(16)
                             .food(Foods.SALMON)  // 2 hunger
