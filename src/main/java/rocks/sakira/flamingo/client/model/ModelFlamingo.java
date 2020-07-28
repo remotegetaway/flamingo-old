@@ -11,8 +11,6 @@ import rocks.sakira.flamingo.entity.EntityFlamingo;
 
 public class ModelFlamingo extends EntityModel<EntityFlamingo> {
     private static final Logger LOGGER = LogManager.getLogger("Flamingo/ModelFlamingo");
-    private Integer legCounter;
-
     private final ModelRenderer beak;
     private final ModelRenderer beaktip;
     private final ModelRenderer body;
@@ -36,6 +34,7 @@ public class ModelFlamingo extends EntityModel<EntityFlamingo> {
     private final ModelRenderer upper2;
     private final ModelRenderer upper;
     private final ModelRenderer wings;
+    private Integer legCounter;
 
 
     public ModelFlamingo() {

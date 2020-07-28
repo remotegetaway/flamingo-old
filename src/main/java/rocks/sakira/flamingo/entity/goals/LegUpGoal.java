@@ -14,9 +14,8 @@ public class LegUpGoal extends Goal {
     private static final Logger LOGGER = LogManager.getLogger("Flamingo/LegUpGoal");
 
     private final EntityFlamingo entity;
-
-    private int cycleCount = 0;
     private final int totalCycles;
+    private int cycleCount = 0;
 
     public LegUpGoal(EntityFlamingo entityIn) {
         this.entity = entityIn;

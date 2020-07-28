@@ -1,20 +1,20 @@
-modLoader="javafml"
-loaderVersion="[31,)"
+modLoader = "javafml"
+loaderVersion = "[31,)"
 
 [[mods]]
-modId="flamingo_ooo"
-version="${file.jarVersion}"
-displayName="Flamingo, oh, oh, oh..."
+modId = "flamingo_ooo"
+version = "${file.jarVersion}"
+displayName = "Flamingo, oh, oh, oh..."
 
-authors="sakiraart & gdude2002"
+authors = "sakiraart & gdude2002"
 
-description='''
+description = '''
 If you're multicoloured, that's cool too
 '''
 
 [[dependencies.flamingo_ooo]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.15.2]"
-    ordering="NONE"
-    side="BOTH"
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.15.2]"
+ordering = "NONE"
+side = "BOTH"

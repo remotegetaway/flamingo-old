@@ -19,7 +19,6 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import rocks.sakira.flamingo.entity.goals.DeepSwimGoal;
-import rocks.sakira.flamingo.entity.goals.LegUpGoal;
 import rocks.sakira.flamingo.register.Entities;
 import rocks.sakira.flamingo.register.Items;
 
