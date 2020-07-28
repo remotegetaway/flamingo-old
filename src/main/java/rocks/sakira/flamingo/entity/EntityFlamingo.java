@@ -50,7 +50,7 @@ public class EntityFlamingo extends AnimalEntity {
         this.goalSelector.addGoal(0, new PanicGoal(this, 0.4));
         this.goalSelector.addGoal(1, new TemptGoal(this, 0.4, false, TEMPTATION_ITEMS));
         this.goalSelector.addGoal(2, new BreedGoal(this, 0.3));
-        this.goalSelector.addGoal(3, new LegUpGoal(this));
+//        this.goalSelector.addGoal(3, new LegUpGoal(this));
         this.goalSelector.addGoal(4, new RandomWalkingGoal(this, 0.25));
         this.goalSelector.addGoal(5, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(6, new DeepSwimGoal(this));
