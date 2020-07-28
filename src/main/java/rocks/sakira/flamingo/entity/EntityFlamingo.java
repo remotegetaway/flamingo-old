@@ -108,11 +108,11 @@ public class EntityFlamingo extends AnimalEntity {
     public void readAdditional(CompoundNBT compound) {
         super.readAdditional(compound);
 
-        if (compound.contains("EggLayTime")) {
+        if (compound.contains("EggLayTime"))
             this.timeUntilNextEgg = compound.getInt("EggLayTime");
-        }
 
-        dataManager.set(LEG_UP_STATE, compound.getBoolean("LegUpState"));
+        if (compound.contains("LegUpState"))
+            dataManager.set(LEG_UP_STATE, compound.getBoolean("LegUpState"));
     }
 
     public boolean isOneLegged() {
