@@ -84,6 +84,8 @@ dependencies {
 }
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
+    classifier 'MC1.15.2'
+
     manifest {
         attributes([
                 "Specification-Title": "examplemod",
