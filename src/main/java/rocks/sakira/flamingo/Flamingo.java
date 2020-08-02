@@ -35,6 +35,7 @@ public class Flamingo {
         final IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         eventBus.register(this);
+        eventBus.register(Entities.class);
 
         Effects.REGISTER.register(eventBus);
         Entities.REGISTER.register(eventBus);

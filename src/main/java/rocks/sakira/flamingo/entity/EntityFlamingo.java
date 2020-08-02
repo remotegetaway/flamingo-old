@@ -141,26 +141,4 @@ public class EntityFlamingo extends AnimalEntity {
 
         return rocks.sakira.flamingo.register.SoundEvents.FLAMINGO_AMBIENT_SOUND.get();
     }
-
-    // TODO?
-//    @Override
-//    public void onDeath(DamageSource cause) {
-//        Entity damageSource = cause.getImmediateSource();
-//
-//        if (damageSource != null) {
-//            if (damageSource.getType().equals(EntityType.SPECTRAL_ARROW)) {
-//                if (damageSource.world.rand.nextInt(4) == 0) {
-//                    if (!this.isChild()) {
-//                        if (this.getTextureName() == "buck") {
-//                            this.entityDropItem(new ItemStack(rocks.sakira.gentlefawn.register.Items.BUCK_HEAD_ITEM.get(), 1));
-//                        } else {
-//                            this.entityDropItem(new ItemStack(rocks.sakira.gentlefawn.register.Items.DOE_HEAD_ITEM.get(), 1));
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//        super.onDeath(cause);
-//    }
 }

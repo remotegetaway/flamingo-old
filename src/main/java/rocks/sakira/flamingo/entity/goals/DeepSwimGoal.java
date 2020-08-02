@@ -16,8 +16,8 @@ public class DeepSwimGoal extends SwimGoal {
 
     @Override
     public boolean shouldExecute() {
-        BlockState below = this.entity.world.getBlockState(new BlockPos(this.entity).down());
-        BlockState above = this.entity.world.getBlockState(new BlockPos(this.entity).up());
+        BlockState below = this.entity.world.getBlockState(new BlockPos(this.entity.getPosX(), this.entity.getPosY(), this.entity.getPosZ()).down());
+        BlockState above = this.entity.world.getBlockState(new BlockPos(this.entity.getPosX(), this.entity.getPosY(), this.entity.getPosZ()).up());
 
         boolean fluidBelow = !below.getFluidState().getFluid().isEquivalentTo(Fluids.EMPTY);
         boolean fluidAbove = !above.getFluidState().getFluid().isEquivalentTo(Fluids.EMPTY);

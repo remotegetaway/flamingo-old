@@ -26,9 +26,9 @@ public class LegUpGoal extends Goal {
 
     @Override
     public boolean shouldExecute() {
-        BlockState below = this.entity.world.getBlockState(new BlockPos(this.entity).down());
-        BlockState middle = this.entity.world.getBlockState(new BlockPos(this.entity));
-        BlockState above = this.entity.world.getBlockState(new BlockPos(this.entity).up());
+        BlockState below = this.entity.world.getBlockState(new BlockPos(this.entity.getPosX(), this.entity.getPosY(), this.entity.getPosZ()).down());
+        BlockState middle = this.entity.world.getBlockState(new BlockPos(this.entity.getPosX(), this.entity.getPosY(), this.entity.getPosZ()));
+        BlockState above = this.entity.world.getBlockState(new BlockPos(this.entity.getPosX(), this.entity.getPosY(), this.entity.getPosZ()).up());
 
         boolean fluidBelow = !below.getFluidState().getFluid().isEquivalentTo(Fluids.EMPTY);
         boolean fluidMiddle = !middle.getFluidState().getFluid().isEquivalentTo(Fluids.EMPTY);

@@ -1,9 +1,9 @@
 package rocks.sakira.flamingo;
 
-import net.minecraft.world.storage.loot.ItemLootEntry;
-import net.minecraft.world.storage.loot.LootEntry;
-import net.minecraft.world.storage.loot.LootPool;
-import net.minecraft.world.storage.loot.LootTables;
+import net.minecraft.loot.ItemLootEntry;
+import net.minecraft.loot.LootEntry;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTables;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
