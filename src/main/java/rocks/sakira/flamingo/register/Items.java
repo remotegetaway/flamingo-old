@@ -7,6 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import rocks.sakira.flamingo.Flamingo;
 import rocks.sakira.flamingo.item.ItemFlamingoEgg;
 import rocks.sakira.flamingo.item.ItemShrimp;
+import rocks.sakira.flamingo.item.ItemShrimpCocktail;
 import rocks.sakira.flamingo.item.SupplierSpawnEggItem;
 
 public class Items {
@@ -69,6 +70,17 @@ public class Items {
                     new Item.Properties()
                             .maxStackSize(16)
                             .food(Foods.COOKED_RABBIT)  // 5 hunger
+                            .group(GROUP)
+            )
+    );
+
+    public static final RegistryObject<Item> SHRIMP_COCKTAIL = REGISTER.register(
+            "shrimp_cocktail",
+
+            () -> new ItemShrimpCocktail(
+                    new Item.Properties()
+                            .maxStackSize(16)
+                            .food(Foods.MUSHROOM_STEW)  // 6 hunger
                             .group(GROUP)
             )
     );
