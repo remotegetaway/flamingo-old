@@ -41,7 +41,8 @@ public class RenderEventHandler {
         float f7 = -minecraft.player.rotationYaw / 64.0F;
         float f8 = minecraft.player.rotationPitch / 64.0F;
 
-        final float alpha = 0.2F * (effect.getAmplifier() + 1);
+//        final float alpha = 0.2F * (effect.getAmplifier() + 1);
+        final float alpha = 0.1F + (0.3F * (effect.getAmplifier() + 1));
         final float brightness = 1.0F;
         final float zValue = -0.1F;
 

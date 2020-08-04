@@ -14,6 +14,6 @@ public class Effects {
     public static final RegistryObject<Effect> SHRIMP_EFFECT = REGISTER.register(
             "shrimp",
 
-            () -> new ShrimpEffect(EffectType.HARMFUL, 0xFF7777)
+            () -> new ShrimpEffect(EffectType.HARMFUL, 0xFF96AB)
     );
 }
