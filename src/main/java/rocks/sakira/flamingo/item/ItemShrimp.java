@@ -24,7 +24,7 @@ public class ItemShrimp extends Item {
             } else {
                 int amplifier = effect.getAmplifier();
 
-                if (amplifier < 4) {
+                if (amplifier < 2) {
                     amplifier += 1;  // Make it more intense
                 }
 
