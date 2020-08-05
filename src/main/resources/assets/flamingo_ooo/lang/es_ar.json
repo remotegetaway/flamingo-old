@@ -1,0 +1,23 @@
+{
+  "_comment": "This file contains our only Spanish dialect - the others need to be updated with it",
+
+  "itemGroup.flamingo_ooo": "Flamingo!",
+
+  "effect.flamingo_ooo.shrimp": "Flamenqués",
+
+  "entity.flamingo_ooo.flamingo": "Flamenco",
+
+  "item.flamingo_ooo.flamingo_spawn_egg": "Generar flamenco",
+  "item.flamingo_ooo.flamingo_egg": "Huevo de flamenco",
+  "item.flamingo_ooo.pink_feather": "Pluma rosa",
+
+  "item.flamingo_ooo.shrimp": "Camarón crudo",
+  "item.flamingo_ooo.cooked_shrimp": "Camarón cocinado",
+  "item.flamingo_ooo.shrimp_cocktail": "Cóctel de camarones",
+
+  "item.flamingo_ooo.suspicious_chicken": "Pollo sospechoso",
+  "item.flamingo_ooo.cooked_suspicious_chicken": "Pollo sospechoso cocinado",
+
+  "subtitle.flamingo.ambient": "Graznido de flamenco",
+  "subtitle.flamingo.baby.ambient": "Piar de flamenco bebé"
+}
