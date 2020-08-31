@@ -1,0 +1,24 @@
+{
+  "_credit": "Translations provided by 煎餅",
+
+  "itemGroup.flamingo_ooo": "Flamingo!",
+  "itemGroup.flamingo_ooo.flamingo": "Flamingo!",
+
+  "effect.flamingo_ooo.shrimp": "鶴之視野",
+
+  "entity.flamingo_ooo.flamingo": "紅鶴",
+
+  "item.flamingo_ooo.flamingo_spawn_egg": "紅鶴生怪蛋",
+  "item.flamingo_ooo.flamingo_egg": "鶴蛋",
+  "item.flamingo_ooo.pink_feather": "鶴羽",
+
+  "item.flamingo_ooo.shrimp": "生蝦",
+  "item.flamingo_ooo.cooked_shrimp": "烤蝦",
+  "item.flamingo_ooo.shrimp_cocktail": "鮮蝦雞尾酒",
+
+  "item.flamingo_ooo.suspicious_chicken": "生鶴肉",
+  "item.flamingo_ooo.cooked_suspicious_chicken": "烤鶴肉",
+
+  "subtitle.flamingo.ambient": "成年紅鶴鳴叫",
+  "subtitle.flamingo.baby.ambient": "幼年紅鶴吱喳聲"
+}
