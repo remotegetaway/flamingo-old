@@ -2,6 +2,7 @@
   "_comment": "This file is based on es_ar.json and should be updated with it",
 
   "itemGroup.flamingo_ooo": "Flamingo!",
+  "itemGroup.flamingo_ooo.flamingo": "Flamingo!",
 
   "effect.flamingo_ooo.shrimp": "Flamenqués",
 

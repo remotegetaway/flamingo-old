@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "rocks.sakira.flamingo.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "LootPoolMixin",
+    "LootTableMixin",
+    "SpawnRestrictionMixin"
+  ],
+  "client": [
+    "WorldRenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

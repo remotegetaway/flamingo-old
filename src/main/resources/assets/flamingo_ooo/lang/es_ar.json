@@ -2,6 +2,7 @@
   "_comment": "This file contains our only Spanish dialect - the others need to be updated with it",
 
   "itemGroup.flamingo_ooo": "Flamingo!",
+  "itemGroup.flamingo_ooo.flamingo": "Flamingo!",
 
   "effect.flamingo_ooo.shrimp": "Flamenqués",
 
