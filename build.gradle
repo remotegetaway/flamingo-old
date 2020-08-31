@@ -63,6 +63,8 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 }
 
 jar {
+    classifier 'MC1.16.1-fabric'
+
     from "LICENSE"
 }
 
