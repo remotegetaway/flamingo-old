@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.CompoundTag
 import net.minecraft.recipe.Ingredient
+import net.minecraft.server.world.ServerWorld
 import net.minecraft.sound.SoundEvent
 import net.minecraft.sound.SoundEvents
 import net.minecraft.world.World
@@ -50,8 +51,8 @@ class FlamingoEntity(entityType: EntityType<out AnimalEntity>, world: World) : A
             dimensions
     }
 
-    override fun createChild(mate: PassiveEntity?): PassiveEntity? {
-        return Entities.FLAMINGO.create(this.world)
+    override fun createChild(world: ServerWorld, mate: PassiveEntity): PassiveEntity? {
+        return Entities.FLAMINGO.create(world)
     }
 
     override fun isBreedingItem(stack: ItemStack?): Boolean {

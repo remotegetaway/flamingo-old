@@ -3,6 +3,7 @@
   "package": "rocks.sakira.flamingo.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DefaultBiomeCreatorMixin",
     "LootPoolMixin",
     "LootTableMixin",
     "SpawnRestrictionMixin"

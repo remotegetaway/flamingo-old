@@ -31,7 +31,6 @@ fun init() {
     Entities.registerAttributes()
 
     registerSpawnRestrictions()
-    registerSpawns()
     registerShrimpLootEntry()
 }
 
@@ -53,21 +52,6 @@ fun registerSpawnRestrictions() {
         Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
         AnimalEntity::isValidNaturalSpawn
     )
-}
-
-fun registerSpawns() {
-    for (biome in Registry.BIOME.stream()) {
-        if (biome.category == Biome.Category.SWAMP) {
-            biome.getEntitySpawnList(SpawnGroup.CREATURE).add(
-                Biome.SpawnEntry(
-                    Entities.FLAMINGO,
-                    15,
-                    5,
-                    12
-                )
-            )
-        }
-    }
 }
 
 fun registerShrimpLootEntry() {
