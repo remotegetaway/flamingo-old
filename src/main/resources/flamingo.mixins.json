@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "rocks.sakira.flamingo.mixin",
+  "package": "io.github.faecraft.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "DefaultBiomeCreatorMixin",

@@ -1,0 +1,7 @@
+package io.github.faecraft.flamingo.effects
+
+import net.minecraft.entity.effect.StatusEffect
+import net.minecraft.entity.effect.StatusEffectType
+
+class ShrimpEffect(type: StatusEffectType?, color: Int) : StatusEffect(type, color)
+

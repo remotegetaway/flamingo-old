@@ -23,10 +23,10 @@
 
   "entrypoints": {
     "main": [
-      "rocks.sakira.flamingo.FlamingoKt::init"
+      "io.github.faecraft.flamingo.FlamingoKt::init"
     ],
     "client": [
-      "rocks.sakira.flamingo.FlamingoKt::clientInit"
+      "io.github.faecraft.flamingo.FlamingoKt::clientInit"
     ]
   },
 
