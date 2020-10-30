@@ -218,7 +218,7 @@ class FlamingoModel : EntityModel<FlamingoEntity>() {
         rightleg.pitch = MathHelper.cos(limbAngle * 1f + Math.PI.toFloat()) * 0.7f * limbDistance
     }
 
-    fun setAngles(part: ModelPart, pitch: Float, yaw: Float, roll: Float) {
+    private fun setAngles(part: ModelPart, pitch: Float, yaw: Float, roll: Float) {
         // NOTE: This auto-generated method will likely never be changed, so don't bother copying it in
         // from generated model code.
 

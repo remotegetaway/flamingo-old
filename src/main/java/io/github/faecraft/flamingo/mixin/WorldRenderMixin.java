@@ -1,4 +1,4 @@
-package io.github.faecraft.mixin;
+package io.github.faecraft.flamingo.mixin;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MinecraftClient;

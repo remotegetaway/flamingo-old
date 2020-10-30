@@ -11,9 +11,9 @@ import net.minecraft.loot.LootTables
 import net.minecraft.loot.entry.ItemEntry
 import net.minecraft.world.Heightmap
 import io.github.faecraft.flamingo.client.render.FlamingoRenderer
-import io.github.faecraft.mixin.LootPoolMixin
-import io.github.faecraft.mixin.LootTableMixin
-import io.github.faecraft.mixin.SpawnRestrictionMixin
+import io.github.faecraft.flamingo.mixin.LootPoolMixin
+import io.github.faecraft.flamingo.mixin.LootTableMixin
+import io.github.faecraft.flamingo.mixin.SpawnRestrictionMixin
 import io.github.faecraft.flamingo.register.Effects
 import io.github.faecraft.flamingo.register.Entities
 import io.github.faecraft.flamingo.register.Items

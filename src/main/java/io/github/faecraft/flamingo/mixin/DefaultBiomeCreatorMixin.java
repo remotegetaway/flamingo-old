@@ -1,4 +1,4 @@
-package io.github.faecraft.mixin;
+package io.github.faecraft.flamingo.mixin;
 
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.world.biome.DefaultBiomeCreator;

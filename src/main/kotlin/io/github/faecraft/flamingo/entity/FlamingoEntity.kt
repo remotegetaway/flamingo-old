@@ -30,14 +30,14 @@ class FlamingoEntity(entityType: EntityType<out AnimalEntity>, world: World) : A
     }
 
     override fun initGoals() {
-        this.goalSelector.add(0, EscapeDangerGoal(this, 0.4))
-        this.goalSelector.add(1, TemptGoal(this, 0.4, false, Ingredient.ofItems(Items.SHRIMP)))
+        this.goalSelector.add(0, EscapeDangerGoal(this, 1.0))
+        this.goalSelector.add(1, TemptGoal(this, 1.0, false, Ingredient.ofItems(Items.SHRIMP)))
         this.goalSelector.add(2, AnimalMateGoal(this, 0.3))
-        this.goalSelector.add(3, WanderAroundGoal(this, 0.25))
-        this.goalSelector.add(4, WanderAroundGoal(this, 0.25))
+        this.goalSelector.add(3, WanderAroundGoal(this, 0.8))
+        this.goalSelector.add(4, WanderAroundGoal(this, 0.8))
         this.goalSelector.add(5, LookAroundGoal(this))
         this.goalSelector.add(6, DeepSwimGoal(this))
-        this.goalSelector.add(7, FollowParentGoal(this, 0.4))
+        this.goalSelector.add(7, FollowParentGoal(this, 1.0))
         this.goalSelector.add(8, LookAtEntityGoal(this, PlayerEntity::class.java, 6F))
         this.goalSelector.add(9, LookAtEntityGoal(this, FlamingoEntity::class.java, 6F))
     }

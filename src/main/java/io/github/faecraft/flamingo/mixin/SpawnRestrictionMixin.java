@@ -1,4 +1,4 @@
-package io.github.faecraft.mixin;
+package io.github.faecraft.flamingo.mixin;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnRestriction;
