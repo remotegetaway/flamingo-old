@@ -38,7 +38,7 @@ object Entities {
             FLAMINGO,
             AnimalEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25)
         )
     }
 
