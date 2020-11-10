@@ -2,7 +2,7 @@
   "itemGroup.flamingo_ooo": "火烈鸟！",
   "itemGroup.flamingo_ooo.flamingo": "火烈鸟！",
 
-  "effect.flamingo_ooo.shrimp": "虾的视觉",
+  "effect.flamingo_ooo.shrimp": "火烈鸟的视野",
 
   "entity.flamingo_ooo.flamingo": "火烈鸟",
 
@@ -12,11 +12,11 @@
 
   "item.flamingo_ooo.shrimp": "虾",
   "item.flamingo_ooo.cooked_shrimp": "熟虾仁",
-  "item.flamingo_ooo.shrimp_cocktail": "鲜虾盅",
+  "item.flamingo_ooo.shrimp_cocktail": "鸡尾酒虾",
 
   "item.flamingo_ooo.suspicious_chicken": "生鸡肉…?",
   "item.flamingo_ooo.cooked_suspicious_chicken": "熟禽肉",
 
-  "subtitle.flamingo.ambient": "咯（火烈鸟叫声）",
-  "subtitle.flamingo.baby.ambient": "叽啾（小火烈鸟叫声）"
+  "subtitle.flamingo.ambient": "火烈鸟：咯",
+  "subtitle.flamingo.baby.ambient": "小火烈鸟：叽啾"
 }
