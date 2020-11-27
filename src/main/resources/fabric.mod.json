@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "flamingo",
+  "id": "flamingo_ooo",
   "version": "${version}",
 
   "name": "Flamingo, oh, oh, oh...",
@@ -16,7 +16,7 @@
     "sources": ""
   },
 
-  "license": "All Rights Reserved",
+  "license": "LGPLv3",
   "icon": "assets/flamingo_ooo/icon.png",
 
   "environment": "*",
@@ -31,7 +31,7 @@
   },
 
   "mixins": [
-    "flamingo.mixins.json"
+    "flamingo_ooo.mixins.json"
   ],
 
   "depends": {
@@ -39,9 +39,5 @@
     "fabric": "*",
     "fabric-language-kotlin": "*",
     "minecraft": "1.16.x"
-  },
-
-  "suggests": {
-    "flamingo": "*"
   }
 }
