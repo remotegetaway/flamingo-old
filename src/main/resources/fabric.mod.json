@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "flamingo_ooo",
+  "version": "${version}",
+
+  "name": "Flamingo, oh, oh, oh...",
+  "description": "If you're multicoloured, that's cool too",
+
+  "authors": [
+    "sakiraart",
+    "gdude2002"
+  ],
+
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "LGPLv3",
+  "icon": "assets/flamingo_ooo/icon.png",
+
+  "environment": "*",
+
+  "entrypoints": {
+    "main": [
+      "io.github.faecraft.flamingo.FlamingoKt::init"
+    ],
+    "client": [
+      "io.github.faecraft.flamingo.FlamingoKt::clientInit"
+    ]
+  },
+
+  "mixins": [
+    "flamingo_ooo.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.8.7",
+    "fabric": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": "1.16.x"
+  }
+}

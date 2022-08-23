@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "io.github.faecraft.flamingo.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "DefaultBiomeCreatorMixin",
+    "LootPoolMixin",
+    "LootTableMixin",
+    "SpawnRestrictionMixin"
+  ],
+  "client": [
+    "WorldRenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

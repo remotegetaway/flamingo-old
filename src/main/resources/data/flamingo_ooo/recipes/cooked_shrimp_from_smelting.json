@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "flamingo_ooo:shrimp"
+  },
+  "result": "flamingo_ooo:cooked_shrimp",
+  "experience": 1.0,
+  "cookingtime": 200
+}
